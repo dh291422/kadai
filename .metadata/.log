@@ -1,0 +1,1531 @@
+!SESSION 2025-06-24 00:52:38.389 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2025-06-24 00:52:45.334
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-24 00:52:45.334
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-24 00:52:45.551
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-24 00:52:45.551
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.core.resources 4 567 2025-06-24 00:52:45.796
+!MESSAGE ワークスペースは復元されましたが、問題が発生しました。
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2025-06-24 00:52:45.796
+!MESSAGE '.org.eclipse.egit.core.cmp' のメタデータを読み取れませんでした。
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/.org.eclipse.egit.core.cmp)[567]: java.lang.Exception: '.org.eclipse.egit.core.cmp' のプロジェクト記述ファイル (.project) がありません。 このファイルには、プロジェクトに関する重要な情報が含まれています。 このファイルが復元されるまで、プロジェクトは正しく機能しません。
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:970)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:954)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:934)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:790)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1616)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2624)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2325)
+	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:591)
+	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:1)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:947)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:257)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:184)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:324)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:267)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:565)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:826)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:768)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1066)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:394)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:643)
+	at org.eclipse.osgi.container.Module.start(Module.java:500)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:528)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:122)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:622)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:353)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:521)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:438)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:195)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at org.eclipse.ui.ide.IDE.registerAdapters(IDE.java:1752)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.initialize(IDEWorkbenchAdvisor.java:205)
+	at org.eclipse.ui.application.WorkbenchAdvisor.internalBasicInitialize(WorkbenchAdvisor.java:171)
+	at org.eclipse.ui.internal.Workbench$18.runWithException(Workbench.java:1766)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4853)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:93)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1762)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2867)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:661)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2025-06-24 00:52:45.798
+!MESSAGE '.org.eclipse.egit.core.cmp' のプロジェクト記述ファイル (.project) がありません。 このファイルには、プロジェクトに関する重要な情報が含まれています。 このファイルが復元されるまで、プロジェクトは正しく機能しません。
+!STACK 0
+java.lang.Exception: '.org.eclipse.egit.core.cmp' のプロジェクト記述ファイル (.project) がありません。 このファイルには、プロジェクトに関する重要な情報が含まれています。 このファイルが復元されるまで、プロジェクトは正しく機能しません。
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:970)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:954)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:934)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:790)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1616)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2624)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2325)
+	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:591)
+	at org.eclipse.core.resources.ResourcesPlugin$WorkspaceInitCustomizer.addingService(ResourcesPlugin.java:1)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:947)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:257)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:184)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:324)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:267)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:565)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:826)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:768)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1066)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:394)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:643)
+	at org.eclipse.osgi.container.Module.start(Module.java:500)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:528)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:122)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:622)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:353)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:41)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass0(BundleLoader.java:521)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:438)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:195)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at org.eclipse.ui.ide.IDE.registerAdapters(IDE.java:1752)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.initialize(IDEWorkbenchAdvisor.java:205)
+	at org.eclipse.ui.application.WorkbenchAdvisor.internalBasicInitialize(WorkbenchAdvisor.java:171)
+	at org.eclipse.ui.internal.Workbench$18.runWithException(Workbench.java:1766)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4853)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:93)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1762)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2867)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:661)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+!SESSION 2025-06-25 08:48:31.039 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2025-06-25 08:48:39.044
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-25 08:48:39.044
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-25 08:48:39.333
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-25 08:48:39.333
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+!SESSION 2025-06-25 08:56:59.959 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2025-06-25 08:57:09.356
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-25 08:57:09.356
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-25 08:57:09.677
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-25 08:57:09.677
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.jdt.core 4 4 2025-06-25 11:11:06.534
+!MESSAGE Could not retrieve superclass
+!STACK 0
+org.eclipse.jdt.internal.compiler.problem.AbortCompilation: Pb(347) 型 org.springframework.hateoas.RepresentationModel を解決できません。It is indirectly referenced from required type org.springframework.data.domain.jaxb.SpringDataJaxb.PageDto
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:159)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemHandler.handle(ProblemHandler.java:226)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.handle(ProblemReporter.java:2673)
+	at org.eclipse.jdt.internal.compiler.problem.ProblemReporter.isClassPathCorrect(ProblemReporter.java:5208)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:125)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:242)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.superclass(BinaryTypeBinding.java:2453)
+	at org.eclipse.jdt.core.dom.TypeBinding.getSuperclass(TypeBinding.java:858)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsBaseSubProcessor.isInherited(UnresolvedElementsBaseSubProcessor.java:1063)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsBaseSubProcessor.addSimilarTypeProposals(UnresolvedElementsBaseSubProcessor.java:1031)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsBaseSubProcessor.collectTypeProposals(UnresolvedElementsBaseSubProcessor.java:791)
+	at org.eclipse.jdt.internal.ui.text.correction.UnresolvedElementsSubProcessor.getTypeProposals(UnresolvedElementsSubProcessor.java:143)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.process(QuickFixProcessor.java:455)
+	at org.eclipse.jdt.internal.ui.text.correction.QuickFixProcessor.getCorrections(QuickFixProcessor.java:378)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionCollector.safeRun(JavaCorrectionProcessor.java:381)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.run(JavaCorrectionProcessor.java:341)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor$SafeCorrectionProcessorAccess.process(JavaCorrectionProcessor.java:336)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.collectCorrections(JavaCorrectionProcessor.java:465)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.getJavaAnnotationFixes(ProblemHover.java:115)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.computeCompletionProposals(ProblemHover.java:89)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover$ProblemInfo.<init>(ProblemHover.java:74)
+	at org.eclipse.jdt.internal.ui.text.java.hover.ProblemHover.createAnnotationInfo(ProblemHover.java:178)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover.getHoverInfo2(AbstractAnnotationHover.java:754)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 18:16:52.363
+!MESSAGE Cannot read properties of null (reading 'scrollWidth')
+!STACK 0
+org.eclipse.swt.SWTException: Cannot read properties of null (reading 'scrollWidth')
+	at org.eclipse.swt.browser.Edge.evaluate(Edge.java:908)
+	at org.eclipse.swt.browser.WebBrowser.evaluate(WebBrowser.java:405)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:665)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:614)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.safeEvaluate(FocusableBrowserInformationControl.java:128)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.lambda$0(FocusableBrowserInformationControl.java:95)
+	at org.eclipse.swt.browser.ProgressListener$2.completed(ProgressListener.java:97)
+	at org.eclipse.swt.browser.Edge.lambda$45(Edge.java:1109)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.jface.internal.text.html.BrowserInformationControl.setVisible(BrowserInformationControl.java:357)
+	at org.eclipse.jface.text.AbstractInformationControlManager.showInformationControl(AbstractInformationControlManager.java:1240)
+	at org.eclipse.jface.text.TextViewerHoverManager.showInformationControl(TextViewerHoverManager.java:276)
+	at org.eclipse.jface.text.AbstractInformationControlManager.internalShowInformationControl(AbstractInformationControlManager.java:1191)
+	at org.eclipse.jface.text.AbstractInformationControlManager.presentInformation(AbstractInformationControlManager.java:1120)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager.presentInformation(AbstractHoverInformationControlManager.java:884)
+	at org.eclipse.jface.text.TextViewerHoverManager.doPresentInformation(TextViewerHoverManager.java:237)
+	at org.eclipse.jface.text.TextViewerHoverManager.lambda$3(TextViewerHoverManager.java:227)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 18:20:35.929
+!MESSAGE Cannot read properties of null (reading 'scrollWidth')
+!STACK 0
+org.eclipse.swt.SWTException: Cannot read properties of null (reading 'scrollWidth')
+	at org.eclipse.swt.browser.Edge.evaluate(Edge.java:908)
+	at org.eclipse.swt.browser.WebBrowser.evaluate(WebBrowser.java:405)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:665)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:614)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.safeEvaluate(FocusableBrowserInformationControl.java:128)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.lambda$0(FocusableBrowserInformationControl.java:95)
+	at org.eclipse.swt.browser.ProgressListener$2.completed(ProgressListener.java:97)
+	at org.eclipse.swt.browser.Edge.lambda$45(Edge.java:1109)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.jface.internal.text.html.BrowserInformationControl.setVisible(BrowserInformationControl.java:357)
+	at org.eclipse.jface.text.AbstractInformationControlManager.showInformationControl(AbstractInformationControlManager.java:1240)
+	at org.eclipse.jface.text.TextViewerHoverManager.showInformationControl(TextViewerHoverManager.java:276)
+	at org.eclipse.jface.text.AbstractInformationControlManager.internalShowInformationControl(AbstractInformationControlManager.java:1191)
+	at org.eclipse.jface.text.AbstractInformationControlManager.presentInformation(AbstractInformationControlManager.java:1120)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager.presentInformation(AbstractHoverInformationControlManager.java:884)
+	at org.eclipse.jface.text.TextViewerHoverManager.doPresentInformation(TextViewerHoverManager.java:237)
+	at org.eclipse.jface.text.TextViewerHoverManager.lambda$3(TextViewerHoverManager.java:227)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-25 18:33:29.031
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 19:04:07.457
+!MESSAGE Cannot read properties of null (reading 'scrollWidth')
+!STACK 0
+org.eclipse.swt.SWTException: Cannot read properties of null (reading 'scrollWidth')
+	at org.eclipse.swt.browser.Edge.evaluate(Edge.java:908)
+	at org.eclipse.swt.browser.WebBrowser.evaluate(WebBrowser.java:405)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:665)
+	at org.eclipse.swt.browser.Browser.evaluate(Browser.java:614)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.safeEvaluate(FocusableBrowserInformationControl.java:128)
+	at org.eclipse.lsp4e.operations.hover.FocusableBrowserInformationControl.lambda$0(FocusableBrowserInformationControl.java:95)
+	at org.eclipse.swt.browser.ProgressListener$2.completed(ProgressListener.java:97)
+	at org.eclipse.swt.browser.Edge.lambda$45(Edge.java:1109)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.jface.internal.text.html.BrowserInformationControl.setVisible(BrowserInformationControl.java:357)
+	at org.eclipse.jface.text.AbstractInformationControlManager.showInformationControl(AbstractInformationControlManager.java:1240)
+	at org.eclipse.jface.text.TextViewerHoverManager.showInformationControl(TextViewerHoverManager.java:276)
+	at org.eclipse.jface.text.AbstractInformationControlManager.internalShowInformationControl(AbstractInformationControlManager.java:1191)
+	at org.eclipse.jface.text.AbstractInformationControlManager.presentInformation(AbstractInformationControlManager.java:1120)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager.presentInformation(AbstractHoverInformationControlManager.java:884)
+	at org.eclipse.jface.text.TextViewerHoverManager.doPresentInformation(TextViewerHoverManager.java:237)
+	at org.eclipse.jface.text.TextViewerHoverManager.lambda$3(TextViewerHoverManager.java:227)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:33.389
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:33.392
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:37.167
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:37.173
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:38.871
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:38.876
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:40.682
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:40.686
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:44.703
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:44.708
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:46.321
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:46.325
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:47.911
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:47.916
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:51.200
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:51.204
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:54.223
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:54.232
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:56.500
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:56.506
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:58.692
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:38:58.696
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:39:00.404
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:39:00.408
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:39:03.327
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:39:03.331
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:39:04.621
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:39:04.626
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:39:07.279
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:39:07.283
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:39:08.677
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:39:08.687
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:01.222
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:01.227
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:05.010
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:05.014
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:06.328
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:06.331
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:08.133
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:08.137
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:08.888
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:08.892
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:11.366
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:11.372
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:12.360
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:12.365
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:17.702
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:17.706
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:19.278
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:19.284
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:21.413
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:21.418
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:24.344
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:24.349
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:26.269
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:26.274
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:27.724
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:27.727
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:29.374
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:29.378
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:31.852
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:31.857
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:32.507
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:32.511
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:35.178
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:35.183
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:36.884
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:40:36.889
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:00.196
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:00.202
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:03.435
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:03.439
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:06.107
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:06.112
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:06.748
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:06.752
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:07.483
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:07.487
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:08.689
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:08.694
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:10.032
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:10.037
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:16.675
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:16.679
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:18.065
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:18.070
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:19.210
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:19.216
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:19.749
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:19.754
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:20.410
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:20.415
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:21.893
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:21.898
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:23.005
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:23.010
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:23.691
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:23.696
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:26.876
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:26.881
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:29.589
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:29.594
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:30.459
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:30.463
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:32.589
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:32.593
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:34.994
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:34.998
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:37.019
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:37.024
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:39.176
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:39.182
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:42.586
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:41:42.589
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:06.086
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:06.096
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:13.573
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:13.583
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:15.052
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:15.056
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:16.744
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:16.749
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:40.697
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:40.702
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:49.392
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:49.397
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:53.422
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:46:53.427
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:47:02.853
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:47:02.857
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:47:11.894
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 21:47:11.898
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-25 22:41:31.236
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-25 22:55:44.984
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+!SESSION 2025-06-26 00:06:24.940 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2025-06-26 00:06:43.896
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-26 00:06:43.896
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-26 00:06:44.341
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-26 00:06:44.341
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+!SESSION 2025-06-26 00:23:53.706 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2025-06-26 00:24:02.237
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-26 00:24:02.237
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-26 00:24:02.470
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-26 00:24:02.470
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 4 0 2025-06-26 10:53:41.409
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.springframework.ide.eclipse.boot.dash.model.BootProjectDashElement.getCurrentChildren()" because the return value of "org.springframework.ide.eclipse.boot.dash.model.LaunchConfDashElement.getParent()" is null
+	at org.springframework.ide.eclipse.boot.dash.model.ToggleFiltersModel$1.accept(ToggleFiltersModel.java:46)
+	at org.springframework.ide.eclipse.boot.dash.model.ToggleFiltersModel$1.accept(ToggleFiltersModel.java:1)
+	at org.springsource.ide.eclipse.commons.livexp.util.Filters$2.accept(Filters.java:51)
+	at org.springsource.ide.eclipse.commons.livexp.util.Filters$2.accept(Filters.java:51)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$11.select(BootDashUnifiedTreeSection.java:417)
+	at org.eclipse.jface.viewers.ViewerFilter.filter(ViewerFilter.java:62)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:855)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2273)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2301)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:3122)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:796)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1996)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1963)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1486)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1392)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:367)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1353)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1486)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:533)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$3$1.run(BootDashUnifiedTreeSection.java:208)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.ui 4 0 2025-06-26 10:53:41.414
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.springframework.ide.eclipse.boot.dash.model.BootProjectDashElement.getCurrentChildren()" because the return value of "org.springframework.ide.eclipse.boot.dash.model.LaunchConfDashElement.getParent()" is null
+	at org.springframework.ide.eclipse.boot.dash.model.ToggleFiltersModel$1.accept(ToggleFiltersModel.java:46)
+	at org.springframework.ide.eclipse.boot.dash.model.ToggleFiltersModel$1.accept(ToggleFiltersModel.java:1)
+	at org.springsource.ide.eclipse.commons.livexp.util.Filters$2.accept(Filters.java:51)
+	at org.springsource.ide.eclipse.commons.livexp.util.Filters$2.accept(Filters.java:51)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$11.select(BootDashUnifiedTreeSection.java:417)
+	at org.eclipse.jface.viewers.ViewerFilter.filter(ViewerFilter.java:62)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:855)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2273)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2301)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:3122)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:796)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1996)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1963)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1486)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1392)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:367)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1353)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1486)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:533)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$3$1.run(BootDashUnifiedTreeSection.java:208)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.ui 4 0 2025-06-26 10:53:41.417
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.springframework.ide.eclipse.boot.dash.model.BootProjectDashElement.getCurrentChildren()" because the return value of "org.springframework.ide.eclipse.boot.dash.model.LaunchConfDashElement.getParent()" is null
+	at org.springframework.ide.eclipse.boot.dash.model.ToggleFiltersModel$1.accept(ToggleFiltersModel.java:46)
+	at org.springframework.ide.eclipse.boot.dash.model.ToggleFiltersModel$1.accept(ToggleFiltersModel.java:1)
+	at org.springsource.ide.eclipse.commons.livexp.util.Filters$2.accept(Filters.java:51)
+	at org.springsource.ide.eclipse.commons.livexp.util.Filters$2.accept(Filters.java:51)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$11.select(BootDashUnifiedTreeSection.java:417)
+	at org.eclipse.jface.viewers.ViewerFilter.filter(ViewerFilter.java:62)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:855)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2273)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2301)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:3122)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:796)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1996)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1963)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1486)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1392)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:367)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1353)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1486)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:533)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$3$1.run(BootDashUnifiedTreeSection.java:208)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.ui 4 0 2025-06-26 10:53:41.418
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.springframework.ide.eclipse.boot.dash.model.BootProjectDashElement.getCurrentChildren()" because the return value of "org.springframework.ide.eclipse.boot.dash.model.LaunchConfDashElement.getParent()" is null
+	at org.springframework.ide.eclipse.boot.dash.model.ToggleFiltersModel$1.accept(ToggleFiltersModel.java:46)
+	at org.springframework.ide.eclipse.boot.dash.model.ToggleFiltersModel$1.accept(ToggleFiltersModel.java:1)
+	at org.springsource.ide.eclipse.commons.livexp.util.Filters$2.accept(Filters.java:51)
+	at org.springsource.ide.eclipse.commons.livexp.util.Filters$2.accept(Filters.java:51)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$11.select(BootDashUnifiedTreeSection.java:417)
+	at org.eclipse.jface.viewers.ViewerFilter.filter(ViewerFilter.java:62)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:855)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2273)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2301)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:3122)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:796)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1996)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1963)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1486)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1392)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:367)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1353)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1486)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:533)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$3$1.run(BootDashUnifiedTreeSection.java:208)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.ui 4 0 2025-06-26 10:53:41.421
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.springframework.ide.eclipse.boot.dash.model.BootProjectDashElement.getCurrentChildren()" because the return value of "org.springframework.ide.eclipse.boot.dash.model.LaunchConfDashElement.getParent()" is null
+	at org.springframework.ide.eclipse.boot.dash.model.ToggleFiltersModel$1.accept(ToggleFiltersModel.java:46)
+	at org.springframework.ide.eclipse.boot.dash.model.ToggleFiltersModel$1.accept(ToggleFiltersModel.java:1)
+	at org.springsource.ide.eclipse.commons.livexp.util.Filters$2.accept(Filters.java:51)
+	at org.springsource.ide.eclipse.commons.livexp.util.Filters$2.accept(Filters.java:51)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$11.select(BootDashUnifiedTreeSection.java:417)
+	at org.eclipse.jface.viewers.ViewerFilter.filter(ViewerFilter.java:62)
+	at org.eclipse.jface.viewers.StructuredViewer.getFilteredChildren(StructuredViewer.java:855)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2273)
+	at org.eclipse.jface.viewers.TreeViewer.isExpandable(TreeViewer.java:553)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.isExpandable(AbstractTreeViewer.java:2301)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updatePlus(AbstractTreeViewer.java:3122)
+	at org.eclipse.jface.viewers.TreeViewer.updatePlus(TreeViewer.java:796)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1996)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1963)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$3(StructuredViewer.java:1486)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1392)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:367)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1353)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1486)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:533)
+	at org.springframework.ide.eclipse.boot.dash.views.sections.BootDashUnifiedTreeSection$3$1.run(BootDashUnifiedTreeSection.java:208)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-26 10:55:36.234
+!MESSAGE Could not get if the workspace folder capability is supported due to timeout after 1 second
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.LanguageServerWrapper.supportsWorkspaceFolderCapability(LanguageServerWrapper.java:694)
+	at org.eclipse.lsp4e.LanguageServerWrapper.canOperate(LanguageServerWrapper.java:666)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$17(LanguageServiceAccessor.java:461)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getStartedWrappersAsync(LanguageServiceAccessor.java:474)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getStartedWrappersAsync(LanguageServiceAccessor.java:461)
+	at org.eclipse.lsp4e.LanguageServers$LanguageServerProjectExecutor.getServers(LanguageServers.java:332)
+	at org.eclipse.lsp4e.LanguageServers.executeOnServers(LanguageServers.java:441)
+	at org.eclipse.lsp4e.LanguageServers.computeFirst(LanguageServers.java:169)
+	at org.eclipse.lsp4e.LanguageServers.computeFirst(LanguageServers.java:145)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:29)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2025-06-26 12:21:57.281 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2025-06-26 12:22:04.041
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-26 12:22:04.041
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-26 12:22:04.326
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-26 12:22:04.326
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-26 15:59:15.413
+!MESSAGE Could not get hover region due to timeout after 1000 milliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverRegion(LSPTextHover.java:151)
+	at org.eclipse.ui.internal.genericeditor.hover.CompositeTextHover.getHoverRegion(CompositeTextHover.java:101)
+	at org.eclipse.jface.text.TextViewerHoverManager.computeInformation(TextViewerHoverManager.java:128)
+	at org.eclipse.jface.text.AbstractInformationControlManager.doShowInformation(AbstractInformationControlManager.java:1101)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager$MouseTracker.mouseHover(AbstractHoverInformationControlManager.java:511)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:246)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4321)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1208)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4119)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3707)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-26 15:59:16.418
+!MESSAGE Could not get hover information due to timeout after 1000 milliseconds
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.operations.hover.LSPTextHover.getHoverInfo(LSPTextHover.java:73)
+	at org.eclipse.ui.internal.genericeditor.hover.CompositeTextHover.getHoverInfo2(CompositeTextHover.java:60)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-26 17:28:19.088
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-26 18:18:17.032
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-26 19:35:39.905
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/resources/static/js/preview.js
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-26 19:35:43.449
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/resources/static/js/preview.js
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-26 19:35:45.798
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/resources/static/js/preview.js
+!SESSION 2025-06-27 11:11:06.209 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2025-06-27 11:11:14.170
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-27 11:11:14.170
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-27 11:11:14.481
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-27 11:11:14.481
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 23:26:20.155
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AuthController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 23:29:48.936
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/security/WebSecurityConfig.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 23:32:30.166
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/resources/static/js/preview.js
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 23:48:51.448
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 23:48:52.827
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.ui 4 0 2025-06-28 00:00:21.110
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+java.lang.IllegalStateException: must specify at least one linked position
+	at org.eclipse.jface.text.link.LinkedModeModel.enforceNotEmpty(LinkedModeModel.java:530)
+	at org.eclipse.jface.text.link.LinkedModeModel.install(LinkedModeModel.java:484)
+	at org.eclipse.jface.text.link.LinkedModeModel.forceInstall(LinkedModeModel.java:441)
+	at org.eclipse.jdt.internal.ui.viewsupport.LinkedProposalModelPresenter.enterLinkedMode(LinkedProposalModelPresenter.java:109)
+	at org.eclipse.jdt.internal.ui.text.correction.proposals.LinkedCorrectionProposal.performChange(LinkedCorrectionProposal.java:191)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.apply(CUCorrectionProposal.java:240)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.apply(AbstractAnnotationHover.java:560)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl$4.widgetSelected(AbstractAnnotationHover.java:531)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:286)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4321)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1208)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1232)
+	at org.eclipse.swt.widgets.Widget.sendSelectionEvent(Widget.java:1249)
+	at org.eclipse.swt.widgets.Link.wmNotifyChild(Link.java:721)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5836)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1971)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5403)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4813)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5089)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Link.callWindowProc(Link.java:158)
+	at org.eclipse.swt.widgets.Widget.wmLButtonUp(Widget.java:2169)
+	at org.eclipse.swt.widgets.Control.WM_LBUTTONUP(Control.java:5216)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4794)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5089)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3705)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-06-28 00:00:39.772
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.ui 4 0 2025-06-28 00:01:31.791
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+java.lang.IllegalStateException: must specify at least one linked position
+	at org.eclipse.jface.text.link.LinkedModeModel.enforceNotEmpty(LinkedModeModel.java:530)
+	at org.eclipse.jface.text.link.LinkedModeModel.install(LinkedModeModel.java:484)
+	at org.eclipse.jface.text.link.LinkedModeModel.forceInstall(LinkedModeModel.java:441)
+	at org.eclipse.jdt.internal.ui.viewsupport.LinkedProposalModelPresenter.enterLinkedMode(LinkedProposalModelPresenter.java:109)
+	at org.eclipse.jdt.internal.ui.text.correction.proposals.LinkedCorrectionProposal.performChange(LinkedCorrectionProposal.java:191)
+	at org.eclipse.jdt.ui.text.java.correction.CUCorrectionProposal.apply(CUCorrectionProposal.java:240)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.apply(AbstractAnnotationHover.java:560)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl$4.widgetSelected(AbstractAnnotationHover.java:531)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:286)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4321)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1208)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1232)
+	at org.eclipse.swt.widgets.Widget.sendSelectionEvent(Widget.java:1249)
+	at org.eclipse.swt.widgets.Link.wmNotifyChild(Link.java:721)
+	at org.eclipse.swt.widgets.Control.wmNotify(Control.java:5836)
+	at org.eclipse.swt.widgets.Composite.wmNotify(Composite.java:1971)
+	at org.eclipse.swt.widgets.Control.WM_NOTIFY(Control.java:5403)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4813)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5089)
+	at org.eclipse.swt.internal.win32.OS.CallWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Link.callWindowProc(Link.java:158)
+	at org.eclipse.swt.widgets.Widget.wmLButtonUp(Widget.java:2169)
+	at org.eclipse.swt.widgets.Control.WM_LBUTTONUP(Control.java:5216)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4794)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5089)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3705)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:02:08.427
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:02:09.553
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:02:20.787
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:02:21.745
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:02:22.947
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:02:24.117
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:06:37.933
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/resources/static/js/preview.js
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:10:46.046
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:10:55.386
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:10:57.165
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:10:58.263
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:10:59.594
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:12:42.165
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminUserController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:12:49.826
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AuthController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:15:59.185
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/RestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:18:40.966
+!MESSAGE マーカー ID: '493' が見つかりませんでした。
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/nagoyameshi/src/main/java/com/example/nagoyameshi/security/WebSecurityConfig.java)[376]: java.lang.IllegalStateException
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:63)
+	at org.eclipse.core.internal.resources.Marker.getAttribute(Marker.java:108)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.hasResolutions(LSPCodeActionMarkerResolution.java:211)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:263)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:236)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.hasCorrections(JavaCorrectionProcessor.java:148)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.hasCorrections(JavaCorrectionProcessor.java:138)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.canFix(JavaCorrectionProcessor.java:525)
+	at org.eclipse.jface.text.quickassist.QuickAssistAssistant.canFix(QuickAssistAssistant.java:130)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.hasQuickFix(DefaultMarkerAnnotationAccess.java:435)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.getImage(DefaultMarkerAnnotationAccess.java:390)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.paint(DefaultMarkerAnnotationAccess.java:266)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doPaint1(AnnotationRulerColumn.java:806)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doPaint(AnnotationRulerColumn.java:546)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doubleBufferPaint(AnnotationRulerColumn.java:532)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.redraw(AnnotationRulerColumn.java:832)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+!SUBENTRY 1 org.eclipse.core.resources 4 376 2025-06-28 01:18:40.969
+!MESSAGE マーカー ID: '493' が見つかりませんでした。
+!STACK 0
+java.lang.IllegalStateException
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:63)
+	at org.eclipse.core.internal.resources.Marker.getAttribute(Marker.java:108)
+	at org.eclipse.lsp4e.operations.codeactions.LSPCodeActionMarkerResolution.hasResolutions(LSPCodeActionMarkerResolution.java:211)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolution(MarkerHelpRegistry.java:263)
+	at org.eclipse.ui.internal.ide.registry.MarkerHelpRegistry.hasResolutions(MarkerHelpRegistry.java:236)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.hasCorrections(JavaCorrectionProcessor.java:148)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.hasCorrections(JavaCorrectionProcessor.java:138)
+	at org.eclipse.jdt.internal.ui.text.correction.JavaCorrectionProcessor.canFix(JavaCorrectionProcessor.java:525)
+	at org.eclipse.jface.text.quickassist.QuickAssistAssistant.canFix(QuickAssistAssistant.java:130)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.hasQuickFix(DefaultMarkerAnnotationAccess.java:435)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.getImage(DefaultMarkerAnnotationAccess.java:390)
+	at org.eclipse.ui.texteditor.DefaultMarkerAnnotationAccess.paint(DefaultMarkerAnnotationAccess.java:266)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doPaint1(AnnotationRulerColumn.java:806)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doPaint(AnnotationRulerColumn.java:546)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.doubleBufferPaint(AnnotationRulerColumn.java:532)
+	at org.eclipse.jface.text.source.AnnotationRulerColumn.redraw(AnnotationRulerColumn.java:832)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4094)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:18:41.128
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/security/WebSecurityConfig.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:40:35.091
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:40:35.102
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 01:40:55.380
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AdminRestaurantController.java
+
+!ENTRY org.eclipse.ui 4 0 2025-06-28 02:07:18.274
+!MESSAGE 未処理のイベント・ループ例外
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4932)
+	at org.eclipse.swt.SWT.error(SWT.java:4847)
+	at org.eclipse.swt.SWT.error(SWT.java:4818)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:501)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:420)
+	at org.eclipse.swt.widgets.Menu.indexOf(Menu.java:832)
+	at org.eclipse.swt.widgets.Menu.wmTimer(Menu.java:1352)
+	at org.eclipse.swt.widgets.Control.WM_TIMER(Control.java:5692)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4841)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:336)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1482)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2354)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5089)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:241)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4160)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3701)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:668)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:576)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:178)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:670)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:607)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1492)
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 03:10:52.916
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/java/com/example/nagoyameshi/controller/AuthController.java
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-28 04:24:22.237
+!MESSAGE [エラー]	Unexpected resource file:///C:/pleiades/kadai_002/nagoyameshi/src/main/resources/static/js/preview.js
+!SESSION 2025-06-28 04:33:59.024 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui 2 0 2025-06-28 04:34:04.982
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-28 04:34:04.982
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-06-28 04:34:05.266
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-06-28 04:34:05.266
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'

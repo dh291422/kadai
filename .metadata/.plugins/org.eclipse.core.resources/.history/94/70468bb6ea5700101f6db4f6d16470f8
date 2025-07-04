@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NAGOYAMESHI | 有料プラン登録</title>
+
+    <!-- フォント＆CSS -->
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="https://nagoyameshi-pattern-3.herokuapp.com/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://nagoyameshi-pattern-3.herokuapp.com/build/assets/app.525f5899.css" />
+    <script type="module" src="https://nagoyameshi-pattern-3.herokuapp.com/build/assets/app.91f3e37e.js"></script>
+</head>
+<body>
+    <div class="wrapper" id="app">
+        <!-- ナビゲーション -->
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="https://nagoyameshi-pattern-3.herokuapp.com">NAGOYAMESHI</a>
+            </div>
+        </nav>
+
+        <!-- メイン -->
+        <main>
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-7">
+                        <h1 class="text-center mb-4">有料プラン登録</h1>
+
+                        <!-- ✨ 特典説明カード -->
+                        <div class="card border-info mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-info">月額300円で、お得な特典をゲット！</h5>
+                                <ul class="mb-0">
+                                    <li>📅 いつでも予約可能（当日2時間前まで）</li>
+                                    <li>🌟 お気に入り登録が無制限に</li>
+                                    <li>📝 レビュー投稿＆全件閲覧が可能</li>
+                                    <li>💸 <strong>料金が常に5％OFFに！</strong></li>
+                                    <li>🎁 <strong>割引クーポンが定期的にメールで届く！</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 🚫 エラーメッセージ -->
+                        <div class="alert alert-danger card-error d-none" id="card-error" role="alert">
+                            <ul class="mb-0" id="error-list"></ul>
+                        </div>
+
+                        <!-- 💳 カードフォーム -->
+                        <form id="card-form" action="/subscription" method="post">
+                            <input type="hidden" name="_token" value="m9KNLpyQ1GXCx20wFF2kl3uoK194dez9Uh6M4wKG">                    
+                            <div class="mb-3">
+                                <input class="form-control card-holder-name" id="card-holder-name" type="text" name="cardHolderName" placeholder="カード名義人" required>
+                            </div>
+                            <div class="mb-4" id="card-element"></div>      
+                        </form>
+
+                        <!-- ✅ 登録ボタン -->
+                        <div class="d-flex justify-content-center">
+                            <button class="btn btn-primary w-50 shadow-sm" id="card-button" data-secret="seti_1Rgi05IXjS4orlsmvMY4Eoc8_secret_SbvrTqJ9V1hqO79diNcMzRj8e7KnSpO">登録</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- フッター -->
+        <footer>
+            <div class="d-flex justify-content-center align-items-center bg-dark py-3">
+                <p class="text-white small mb-0">&copy; NAGOYAMESHI All rights reserved.</p>
+            </div> 
+        </footer>
+    </div>
+
+    <!-- スクリプト -->
+    <script src="https://js.stripe.com/v3/"></script>   
+    <script src="https://nagoyameshi-pattern-3.herokuapp.com/js/subscription.js"></script> 
+</body>
+</html>

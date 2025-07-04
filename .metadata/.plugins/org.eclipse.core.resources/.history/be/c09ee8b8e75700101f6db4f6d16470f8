@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NAGOYAMESHI | 有料プラン登録</title>
+
+  <!-- CSS/JSの読み込み -->
+  <link href="/css/style.css" rel="stylesheet">
+  <script type="module" src="/build/assets/app.js"></script>
+</head>
+<body>
+  <div class="nagoyameshi-premium">
+    <nav class="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="/">NAGOYAMESHI</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-md-7">
+            <h1 class="premium-title">有料プラン登録</h1>
+
+            <div class="card premium-benefits">
+              <div class="card-body">
+                <h2 class="premium-subtitle">月額300円でお得な特典！</h2>
+                <ul class="premium-list">
+                  <li>当日2時間前まで予約可能</li>
+                  <li>お気に入り店舗を無制限に登録</li>
+                  <li>レビューの投稿・全件閲覧可能</li>
+                  <li>料金が常に5％OFF！</li>
+                  <li>割引クーポンがメールで届く！</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="alert alert-danger premium-error" id="card-error" role="alert">
+              <ul class="mb-0" id="error-list"></ul>
+            </div>
+
+            <form id="card-form" action="/subscription" method="post">
+              <input type="hidden" name="_token" value="CSRF_TOKEN_PLACEHOLDER">
+              <div class="mb-3">
+                <input class="form-control card-holder-name" id="card-holder-name" type="text" name="cardHolderName" placeholder="カード名義人" required>
+              </div>
+              <div class="mb-4" id="card-element"></div>
+            </form>
+
+            <div class="d-flex justify-content-center">
+              <button class="premium-btn" id="card-button" data-secret="YOUR_SECRET_KEY">登録</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="premium-footer">
+      <p>&copy; NAGOYAMESHI All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="https://js.stripe.com/v3/"></script>   
+  <script src="/js/subscription.js"></script>
+</body>
+</html>

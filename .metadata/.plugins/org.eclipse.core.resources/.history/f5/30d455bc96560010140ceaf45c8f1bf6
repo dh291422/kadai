@@ -1,0 +1,42 @@
+package com.example.nagoyameshi.controller;
+
+import com.example.nagoyameshi.entity.User;
+import com.example.nagoyameshi.service.PasswordResetService;
+import com.example.nagoyameshi.service.UserService;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+@Controller
+@RequestMapping("/password-reset")
+public class PasswordResetController {
+
+    private final UserService userService;
+    private final PasswordResetService passwordResetService;
+
+    public PasswordResetController(UserService userService, PasswordResetService passwordResetService) {
+        this.userService = userService;
+        this.passwordResetService = passwordResetService;
+    }
+
+    @GetMapping("/request")
+    public String showRequestForm() {
+        return "auth/reset_request";
+    }
+
+    @PostMapping("/request")
+    public String handleRequest(@RequestParam("email") String email, HttpServletRequest request, Model model) {
+        User user = userService.findByEmail(email);
+
+        if (user != null) {
+            String appUrl = request.getRequestURL().toString().replace(request.getRequestURI(), request.getContextPath());
+            passwordResetService.sendResetEmail(user, appUrl);
+            model.addAttribute("successMessage", "パスワード再設定用のリンクをメールで送信しました。");
+        } else {
+            model.addAttribute("errorMessage", "このメールアドレスは登録されていません。");
+        }
+
+        return "auth/reset_request";
+    }
+}

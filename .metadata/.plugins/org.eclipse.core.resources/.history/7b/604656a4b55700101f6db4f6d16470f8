@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NAGOYAMESHI | 有料プラン登録</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link href="https://nagoyameshi-pattern-1.herokuapp.com/build/assets/app.2062f98f.css" rel="stylesheet">
+    <link href="https://nagoyameshi-pattern-1.herokuapp.com/css/nagoyameshi.css" rel="stylesheet">
+
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <div class="wrapper" id="app">
+        <!-- ナビゲーション省略（元のまま使用OK） -->
+
+        <main>
+            <div class="container nagoyameshi-container pb-5">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-6 col-md-8">
+                        <nav class="my-3" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0"> 
+                                <li class="breadcrumb-item"><a href="/">ホーム</a></li>                                               
+                                <li class="breadcrumb-item active" aria-current="page">有料プラン登録</li>
+                            </ol>
+                        </nav> 
+                        
+                        <h1 class="mb-3 text-center">有料プラン登録</h1>  
+
+                        <div class="card mb-4">
+                            <div class="card-header text-center">
+                                有料プランの内容
+                            </div>                  
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">・当日の2時間前まで予約可能</li>
+                                <li class="list-group-item">・お気に入り無制限</li>
+                                <li class="list-group-item">・レビューの全件閲覧</li>
+                                <li class="list-group-item">・レビュー投稿可能</li>
+                                <li class="list-group-item">・月額300円（税込）</li>
+                            </ul>
+                        </div>  
+
+                        <div class="d-flex justify-content-center">
+                            <button id="checkout-button" class="btn btn-primary w-50">登録する</button>
+                        </div>
+                    </div>                          
+                </div>
+            </div>
+        </main>
+
+        <!-- フッター省略（元のまま使用OK） -->
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      const stripe = Stripe('pk_test_51RVNkqB6eHNhnOUx4io8IWreTTicDsv5GRq6BP9NfOKxDOcVZL1Wr1exQwWVS8VJRgJLNJxPHvOXhjaYJnQrbI7x00kTUESUPUxxxxxxxxxxxxxxxxxxx'); // 公開キーに変更してね！
+
+      document.getElementById('checkout-button').addEventListener('click', () => {
+        fetch('/stripe/create-checkout-session', {
+          method: 'POST'
+        })
+        .then(res => res.json())
+        .then(data => {
+          return stripe.redirectToCheckout({ sessionId: data.id });
+        })
+        .catch(err => {
+          console.error('Checkout Error:', err);
+          alert('エラーが発生しました。時間をおいて再度お試しください。');
+        });
+      });
+    </script>
+</body>
+</html>

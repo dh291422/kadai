@@ -1,0 +1,41 @@
+package com.example.nagoyameshi.service;
+
+import java.time.LocalDateTime;
+import java.util.Optional;
+import java.util.UUID;
+
+import org.springframework.stereotype.Service;
+
+import com.example.nagoyameshi.entity.PasswordReset;
+import com.example.nagoyameshi.entity.User;
+import com.example.nagoyameshi.repository.PasswordResetRepository;
+
+@Service
+public class PasswordResetService {
+
+    private final PasswordResetRepository passwordResetRepository;
+
+    public PasswordResetService(PasswordResetRepository passwordResetRepository) {
+        this.passwordResetRepository = passwordResetRepository;
+    }
+
+    public PasswordReset createPasswordReset(User user) {
+        PasswordReset passwordReset = new PasswordReset();
+        passwordReset.setUser(user);
+        passwordReset.setToken(UUID.randomUUID().toString());
+        passwordReset.setExpiryDate(LocalDateTime.now().plusHours(1)); // 有効期限は1時間
+        return passwordResetRepository.save(passwordReset);
+    }
+
+    public Optional<PasswordReset> getByToken(String token) {
+        return passwordResetRepository.findByToken(token);
+    }
+
+    public boolean isTokenExpired(PasswordReset passwordReset) {
+        return passwordReset.getExpiryDate().isBefore(LocalDateTime.now());
+    }
+
+    public void delete(PasswordReset passwordReset) {
+        passwordResetRepository.delete(passwordReset);
+    }
+}

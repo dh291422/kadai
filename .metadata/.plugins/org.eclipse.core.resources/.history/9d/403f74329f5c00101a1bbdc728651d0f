@@ -1,0 +1,13 @@
+<h1>有料会員 編集・解約</h1>
+
+<p>現在あなたは有料会員です。</p>
+
+<!-- 編集（今後実装） -->
+<p>
+    <a th:href="@{/subscription/edit}" class="btn btn-primary">プランを編集する（準備中）</a>
+</p>
+
+<!-- 解約フォーム -->
+<form th:action="@{/subscription/cancellation}" method="post">
+    <button type="submit" class="btn btn-danger">有料会員を解約する</button>
+</form>

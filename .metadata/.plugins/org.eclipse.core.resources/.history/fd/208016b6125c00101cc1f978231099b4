@@ -1,0 +1,52 @@
+package com.example.nagoyameshi.controller;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.nagoyameshi.service.StripeService;
+
+import lombok.RequiredArgsConstructor;
+
+@Controller
+@RequiredArgsConstructor
+public class SubscriptionController {
+
+    private final StripeService stripeService;
+
+    @GetMapping("/subscription")
+    public String showSubscriptionPage(HttpServletRequest request, Model model) {
+        // ここでユーザーが契約中かチェック
+        boolean isSubscribed = stripeService.isUserSubscribed(); // ユーザーIDなど渡すなら追加してね
+
+        model.addAttribute("isSubscribed", isSubscribed);
+
+        // サブスク未契約ならStripeセッション作成して登録画面へ
+        if (!isSubscribed) {
+            String sessionId = stripeService.createStripeSession(request);
+
+            if (sessionId == null || sessionId.isEmpty()) {
+                model.addAttribute("errorMessage", "Stripeセッションの作成に失敗しました。");
+                return "premium/error"; 
+            }
+
+            model.addAttribute("sessionId", sessionId);
+            return "premium/register"; // 登録画面
+        } else {
+            // すでに契約中なら解約用画面へ
+            return "premium/cancel"; 
+        }
+    }
+    
+    @GetMapping("/subscription/success")
+    public String subscriptionSuccess() {
+        return "premium/success";
+    }
+
+    @GetMapping("/subscription/cancel")
+    public String subscriptionCancel() {
+        return "premium/cancel";
+    }
+}

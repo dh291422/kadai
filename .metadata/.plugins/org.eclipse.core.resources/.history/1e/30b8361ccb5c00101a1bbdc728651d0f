@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>登録キャンセル</title>
+</head>
+<body>
+    <h1>お支払いがキャンセルされました</h1>
+    <p>サブスクリプションの登録は完了しませんでした。</p>
+    <p>もしよければ、再度お試しくださいね。</p>
+    <a href="/subscription">有料会員登録ページへ戻る</a>
+</body>
+</html>

@@ -1,0 +1,57 @@
+package com.example.nagoyameshi.controller;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.nagoyameshi.login.LoginUser; // ← これが必要！
+import com.example.nagoyameshi.service.StripeService;
+
+import lombok.RequiredArgsConstructor;
+
+@Controller
+@RequiredArgsConstructor
+public class SubscriptionController {
+
+    private final StripeService stripeService;
+
+    @GetMapping("/subscription")
+    public String showSubscriptionPage(HttpServletRequest request, Model model) {
+        String sessionId = stripeService.createStripeSession(request);
+
+        // セッションIDが空の場合はエラーページに飛ばすようにしても安心
+        if (sessionId == null || sessionId.isEmpty()) {
+            model.addAttribute("errorMessage", "Stripeセッションの作成に失敗しました。");
+            return "premium/error";
+        }
+
+        model.addAttribute("sessionId", sessionId);
+        return "premium/register";
+    }
+
+    @GetMapping("/subscription/success")
+    public String subscriptionSuccess() {
+        return "premium/success";
+    }
+
+    @GetMapping("/subscription/cancel")
+    public String subscriptionCancel() {
+        return "premium/cancel";
+    }
+
+    @GetMapping("/subscription/cancellation")
+    public String showCancelPage() {
+        return "premium/cancellation";
+    }
+
+    @PostMapping("/subscription/cancel")
+    public String cancelSubscription(@AuthenticationPrincipal LoginUser loginUser) {
+        stripeService.cancelSubscription(loginUser.getUser());
+        return "redirect:/?cancelled";
+    }
+
+}

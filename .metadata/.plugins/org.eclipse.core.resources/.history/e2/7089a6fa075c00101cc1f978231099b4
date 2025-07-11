@@ -1,0 +1,16 @@
+@GetMapping("/subscription")
+public String showSubscriptionPage(HttpServletRequest request, Model model) {
+    String sessionId = stripeService.createStripeSession(request);
+
+    if (sessionId == null || sessionId.isEmpty()) {
+        // まだerror.html作ってないなら、↓の行をコメントアウト！
+        // model.addAttribute("errorMessage", "Stripeセッションの作成に失敗しました。");
+        // return "subscription/premium/error";
+
+        // 一時的にTOPにリダイレクトでもOK
+        return "redirect:/";
+    }
+
+    model.addAttribute("sessionId", sessionId);
+    return "premium/register";
+}

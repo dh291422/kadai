@@ -1,0 +1,41 @@
+package com.example.nagoyameshi.controller;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.nagoyameshi.login.LoginUser;
+import com.example.nagoyameshi.service.StripeService;
+
+import lombok.RequiredArgsConstructor;
+
+@Controller
+@RequiredArgsConstructor
+public class SubscriptionController {
+
+    private final StripeService stripeService;
+
+    @GetMapping("/subscription")
+    public String showSubscriptionPage(HttpServletRequest request, Model model,
+                                       @AuthenticationPrincipal LoginUser loginUser) {
+        Long userId = loginUser.getUser().getId(); // ← これでエラーは消えるはず！
+        boolean isSubscribed = stripeService.isUserSubscribed(userId);
+
+        model.addAttribute("isSubscribed", isSubscribed);
+
+        if (!isSubscribed) {
+            String sessionId = stripeService.createStripeSession(request);
+            if (sessionId == null || sessionId.isEmpty()) {
+                model.addAttribute("errorMessage", "Stripeセッションの作成に失敗しました。");
+                return "premium/error";
+            }
+            model.addAttribute("sessionId", sessionId);
+            return "premium/register";
+        } else {
+            return "premium/cancel";
+        }
+    }
+}

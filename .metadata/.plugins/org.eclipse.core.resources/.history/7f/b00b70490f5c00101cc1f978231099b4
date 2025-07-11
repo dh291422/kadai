@@ -1,0 +1,43 @@
+package com.example.nagoyameshi.controller;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.nagoyameshi.service.StripeService;
+
+import lombok.RequiredArgsConstructor;
+
+@Controller
+@RequiredArgsConstructor
+public class SubscriptionController {
+
+    private final StripeService stripeService;
+
+    @GetMapping("/subscription")
+    public String showSubscriptionPage(HttpServletRequest request, Model model) {
+        String sessionId = stripeService.createStripeSession(request);
+
+        // セッションIDが空の場合はエラーページに飛ばすようにしても安心
+        if (sessionId == null || sessionId.isEmpty()) {
+            model.addAttribute("errorMessage", "Stripeセッションの作成に失敗しました。");
+            return "premium/error"; // ← 事前にエラーページも作っておこう
+        }
+
+        model.addAttribute("sessionId", sessionId);
+        return "premium/register"; // OK!
+    }
+    
+    @GetMapping("/subscription/success")
+    public String subscriptionSuccess() {
+        return "premium/success"; // 上のsuccess.htmlを返す
+    }
+
+    @GetMapping("/subscription/cancel")
+    public String subscriptionCancel() {
+        return "premium/cancel"; // キャンセル画面も必要なら作成
+    }
+
+}

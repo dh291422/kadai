@@ -1,0 +1,44 @@
+package com.example.nagoyameshi.service;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.example.nagoyameshi.entity.Restaurant;
+import com.example.nagoyameshi.entity.Review;
+import com.example.nagoyameshi.entity.User;
+import com.example.nagoyameshi.form.ReviewEditForm;
+import com.example.nagoyameshi.form.ReviewRegisterForm;
+import com.example.nagoyameshi.repository.ReviewRepository;
+
+@Service
+@RequiredArgsConstructor
+public class StripeService {
+
+    @Value("${stripe.api-key}")
+    private String stripeApiKey;
+
+    private final UserRepository userRepository; // ← 追加
+
+    public void cancelSubscription(User user) {
+        Stripe.apiKey = stripeApiKey;
+
+        try {
+            System.out.println("★ 解約処理開始 for user: " + user.getEmail());
+
+            Subscription subscription = Subscription.retrieve(user.getSubscriptionId());
+            SubscriptionCancelParams params = SubscriptionCancelParams.builder().build();
+            subscription.cancel(params);
+
+            System.out.println("★ Stripe側の解約完了: " + user.getSubscriptionId());
+
+            // ★ DB上の subscriptionId を null にする（もしくは isPremium = false に）
+            user.setSubscriptionId(null);  // ← これで再課金防止！
+            userRepository.save(user);     // ← DBに反映！
+
+            System.out.println("★ ユーザー情報も更新済み");
+
+        } catch (StripeException e) {
+            e.printStackTrace();
+        }
+    }
+}

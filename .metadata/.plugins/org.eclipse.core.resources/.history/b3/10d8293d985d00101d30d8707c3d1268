@@ -1,0 +1,23 @@
+<!-- src/main/resources/templates/reservations/input.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>予約制限ページ</title>
+</head>
+<body>
+    <h1>このページを予約するには有料会員登録が必要です</h1>
+
+    <p>有料会員に登録すると、店舗予約やレビュー投稿などの限定機能が利用できるようになります♡</p>
+
+    <!-- 有料会員登録ボタン -->
+    <form th:action="@{/paid/register}" method="get">
+        <button type="submit">有料会員登録へ進む</button>
+    </form>
+
+    <!-- 戻るボタン（店舗詳細に戻る） -->
+    <form th:action="@{/restaurants/{id}(id=${restaurant.id})}" method="get" style="margin-top: 1em;">
+        <button type="submit">戻る</button>
+    </form>
+</body>
+</html>

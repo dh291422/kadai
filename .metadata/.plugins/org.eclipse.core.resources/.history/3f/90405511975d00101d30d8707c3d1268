@@ -1,0 +1,11 @@
+<!-- src/main/resources/templates/reservations/input.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>予約入力</title>
+</head>
+<body>
+    <h1>予約入力ページ</h1>
+</body>
+</html>

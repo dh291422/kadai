@@ -1,0 +1,17 @@
+package com.example.nagoyameshi.config;
+
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import com.example.nagoyameshi.entity.User;
+import com.example.nagoyameshi.security.UserDetailsImpl;
+
+@GlobalControllerAdvice
+public class GlobalControllerAdvice {
+
+    @ModelAttribute("user")
+    public User setUser(@AuthenticationPrincipal UserDetailsImpl userDetails) {
+        return userDetails != null ? userDetails.getUser() : null;
+    }
+}

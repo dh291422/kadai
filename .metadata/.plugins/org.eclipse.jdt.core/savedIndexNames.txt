@@ -1,3 +1,0 @@
-INDEX VERSION 1.134+C:\pleiades\kadai_002\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-1461014136.index
